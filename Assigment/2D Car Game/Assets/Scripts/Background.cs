@@ -9,16 +9,29 @@ public class Background : MonoBehaviour
 
     float padding = 0.5f;
 
+    //the speed of the scrolling
+    [SerializeField] float BackgroundScrollSpeed = 0.05f;
+    //the material from the texture
+    Material material;
+    Vector2 offSet;
+
+
     // Start is called before the first frame update
     void Start()
     {
         SetUpMoveBoundaries();
+        //get the material of the background from the Renderer component
+        material = GetComponent<Renderer>().material;
+        //will scroll in the y-axis at the speed
+        offSet = new Vector2(0f, BackgroundScrollSpeed);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        material.mainTextureOffset += offSet * Time.deltaTime;
 
     }
 
