@@ -5,14 +5,23 @@ using UnityEngine;
 public class ObstacleWave : MonoBehaviour
 {
     [SerializeField] List<Transform> Waypoints;
-    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float ObsmoveSpeed = 3f;
     int waypointIndex = 0;
+    [SerializeField] GameObject pathPrefab;
+    
+    [SerializeField] int numOfObs = 5;
+
+    [SerializeField] float timeBetweenSpawns = 1.3f;
+    [SerializeField] float spawnRandFactor = 0.4f;
+    private GameObject obstaclePrefab;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = waypoints[waypointIndex].transform.position;
+        transform.position = Waypoints[waypointIndex].transform.position;
 
     }
 
@@ -30,7 +39,7 @@ public class ObstacleWave : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var movementThisFrame = moveSpeed * Time.deltaTime;
+            var movementThisFrame = ObsmoveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
 
             if (transform.position == targetPosition)
@@ -42,6 +51,12 @@ public class ObstacleWave : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    public GameObject getobstaclePrefab()
+    {
+        return obstaclePrefab;
     }
 
 }
