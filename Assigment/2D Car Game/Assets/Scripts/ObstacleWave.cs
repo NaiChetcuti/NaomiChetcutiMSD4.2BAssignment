@@ -13,9 +13,12 @@ public class ObstacleWave : MonoBehaviour
 
     [SerializeField] float timeBetweenSpawns = 1.3f;
     [SerializeField] float spawnRandFactor = 0.4f;
-    private GameObject obstaclePrefab;
+    [SerializeField] GameObject obstaclePrefab;
+    [SerializeField] float health = 50;
 
     [SerializeField] WaveConfig waveConfig;
+
+
 
 
 
@@ -69,4 +72,12 @@ public class ObstacleWave : MonoBehaviour
     {
         waveConfig = waveConfigToSet;
     }
+
+
+    public void OnTriggerEnter2D(Collider2D other) { 
+    DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+    health -= damageDealer.GetDamageForWaves();
+    }
 }
+
+

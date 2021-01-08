@@ -11,7 +11,7 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] int Wave5damage = 5;
     [SerializeField] int Bulletsdamage = 1;
 
-    public int GetDamageforWave1()
+    public int GetDamageForWaves()
     {
         return Wave1damage;
         return Wave2damage;
