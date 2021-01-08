@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] int damage ;
-    [SerializeField] float Wave1;
-    [SerializeField] float Wave2;
-    [SerializeField] float Wave3;
-    [SerializeField] float Wave4;
-    [SerializeField] float Wave5;
-    [SerializeField] float Bullets;
+    [SerializeField] int Wave1damage = 1;
+    [SerializeField] int Wave2damage = 2;
+    [SerializeField] int Wave3damage = 3;
+    [SerializeField] int Wave4damage = 4;
+    [SerializeField] int Wave5damage = 5;
+    [SerializeField] int Bulletsdamage = 1;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public int GetDamageforWave1()
     {
-        
+        return Wave1damage;
+        return Wave2damage;
+        return Wave3damage;
+        return Wave4damage;
+        return Wave5damage;
+        return Bulletsdamage;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
