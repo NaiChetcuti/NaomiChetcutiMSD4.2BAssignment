@@ -15,6 +15,8 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] float spawnRandFactor = 0.4f;
     private GameObject obstaclePrefab;
 
+    [SerializeField] WaveConfig waveConfig;
+
 
 
 
