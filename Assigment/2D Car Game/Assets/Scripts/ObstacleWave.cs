@@ -42,7 +42,7 @@ public class ObstacleWave : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var ObsmoveSpeed = waveConfig.ObstacleMove() * Time.deltaTime;
+            var ObsmoveSpeed = waveConfig.GetObsMoveSpeed() * Time.deltaTime;
 
             var movementThisFrame = ObsmoveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
