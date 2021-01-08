@@ -8,7 +8,7 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] float ObsmoveSpeed = 3f;
     int waypointIndex = 0;
     [SerializeField] GameObject pathPrefab;
-    
+
     [SerializeField] int numOfObs = 5;
 
     [SerializeField] float timeBetweenSpawns = 1.3f;
@@ -16,7 +16,15 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] float health = 50;
 
+    [SerializeField] GameObject BulletPrefab;
+    [SerializeField] float BulletSpeed = 0.2f;
+
     [SerializeField] WaveConfig waveConfig;
+    [SerializeField] DamageDealer dmg;
+
+    [SerializeField] float shotCounter;
+    [SerializeField] float minTimeBetweenShots = 0.2f;
+    [SerializeField] float maxTimeBetweenShots = 3f;
 
 
 
@@ -29,12 +37,14 @@ public class ObstacleWave : MonoBehaviour
         Waypoints = waveConfig.GetWaypointsList();
         transform.position = Waypoints[waypointIndex].transform.position;
 
+        shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CountingDownAndShoot();
     }
 
     void ObstacleMove()
@@ -74,10 +84,66 @@ public class ObstacleWave : MonoBehaviour
     }
 
 
-    public void OnTriggerEnter2D(Collider2D other) { 
-    DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-    health -= damageDealer.GetDamageForWaves();
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        health -= damageDealer.GetDamageForWaves();
+
+        ProcessHit(dmg);
+
+
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+
+
+        }
+
     }
+
+
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamageForWaves();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    
+
+    private void CountingDownAndShoot()
+    {
+        //reduce time every frame
+        shotCounter -= Time.deltaTime;
+
+        if (shotCounter <= 0f)
+        {
+           
+            EnemyFire();
+            
+            shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+
+
+        }
+
+    }
+    private void EnemyFire()
+    {
+        GameObject BulletSpeed = Instantiate(BulletPrefab, transform.position, Quaternion.identity) as GameObject;
+
+        BulletSpeed.GetComponent<Rigidbody2D>().velocity = new Vector2(0,2);
+
+
+    }
+
 }
+
+
+
 
 

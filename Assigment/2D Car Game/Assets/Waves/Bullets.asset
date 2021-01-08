@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f84b4b62c029941ba6ef85a0f01e85, type: 3}
   m_Name: Bullets
   m_EditorClassIdentifier: 
-  ObstaclePrefab: {fileID: 0}
-  pathPrefab: {fileID: 0}
+  ObstaclePrefab: {fileID: 3598983460910468218, guid: fca32d2754bae944e9342fbe4d7b8d5b, type: 3}
+  pathPrefab: {fileID: 3030344873276573008, guid: 61ceafec185456742b5784783d5a9583, type: 3}
   timeBetweenSpawns: 0.5
   spawnRandfactor: 0.3
   numOfObs: 5
