@@ -10,7 +10,7 @@ public class Background : MonoBehaviour
     float padding = 0.5f;
 
     //the speed of the scrolling
-    [SerializeField] float BackgroundScrollSpeed = 0.05f;
+    [SerializeField] float BackgroundScrollSpeed = 0.02f;
     //the material from the texture
     Material material;
     Vector2 offSet;
