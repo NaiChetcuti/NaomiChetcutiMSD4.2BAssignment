@@ -60,5 +60,8 @@ public class ObstacleWave : MonoBehaviour
     }
 
 
-
+    public void SetWaveConfig(WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;
+    }
 }
