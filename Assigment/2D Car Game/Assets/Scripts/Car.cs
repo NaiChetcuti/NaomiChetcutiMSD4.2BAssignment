@@ -5,9 +5,20 @@ using UnityEngine;
 public class Car : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 5f;
+    [SerializeField] GameObject BulletPrefab;
+    [SerializeField] GameObject obstaclePrefab;
+
+    [SerializeField] int health = 50;
+
+
 
     public string Horizontal { get; private set; }
     public string Vertical { get; private set; }
+
+    public int GettingHealth()
+    {
+        return health;
+    }
 
     // Start is called before the first frame update
     void Start()
