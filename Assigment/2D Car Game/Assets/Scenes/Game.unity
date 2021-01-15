@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &503536356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 216.13176
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 123.78881
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.43467712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270278054339985371, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911186208988349225, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
+      propertyPath: m_Name
+      value: MusicPlayer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c09fa08ebfd11d4c82696d04139af87, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +298,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!1 &992843794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1370061303857329206, guid: 02d1ae0b437f76843bf8c3dc3f24f090, type: 3}
@@ -269,7 +332,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!4 &992843796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1370061303857329200, guid: 02d1ae0b437f76843bf8c3dc3f24f090, type: 3}
@@ -300,7 +369,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!4 &1213758707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3030344871970005037, guid: 61ceafec185456742b5784783d5a9583, type: 3}
@@ -331,7 +406,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!4 &1327688527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1382407600716883615, guid: 573a25e459f78eb4382db7bcf4e0f92e, type: 3}
@@ -597,7 +678,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!114 &404244710688345115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,7 +1280,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!114 &5600631624718410881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1435,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!114 &7223045443454932574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,7 +1709,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!114 &7491579411853680960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,7 +1868,13 @@ MonoBehaviour:
   spawnRandFactor: 0.4
   obstaclePrefab: {fileID: 0}
   health: 50
+  BulletPrefab: {fileID: 0}
+  BulletSpeed: 0.2
   waveConfig: {fileID: 0}
+  dmg: {fileID: 0}
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
 --- !u!114 &8871348680007965645
 MonoBehaviour:
   m_ObjectHideFlags: 0

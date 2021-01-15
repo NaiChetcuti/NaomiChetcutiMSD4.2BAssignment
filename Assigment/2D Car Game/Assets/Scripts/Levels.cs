@@ -13,6 +13,7 @@ public class Levels : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+
     }
 
     public void QuitingGame()
