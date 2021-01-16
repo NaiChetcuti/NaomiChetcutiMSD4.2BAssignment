@@ -14,6 +14,11 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration;
 
+    [SerializeField] AudioClip ObstacleDeathSound;
+
+    [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
+
+
 
     public int GetDamageForWaves()
     {
@@ -39,6 +44,9 @@ public class DamageDealer : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
         //destroy after 1 sec
         Destroy(explosion, 1f);
+
+        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
+
 
     }
 

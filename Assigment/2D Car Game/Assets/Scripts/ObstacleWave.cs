@@ -29,6 +29,11 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration;
 
+    [SerializeField] AudioClip ObstacleDeathSound;
+
+    [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
+
+
 
 
 
