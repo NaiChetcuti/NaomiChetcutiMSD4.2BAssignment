@@ -574,6 +574,8 @@ MonoBehaviour:
   MoveSpeed: 5
   BulletPrefab: {fileID: 0}
   obstaclePrefab: {fileID: 0}
+  healthDecreaseaudio: {fileID: 0}
+  healtDecAudioVol: 0.75
   health: 50
 --- !u!114 &293556809356881044
 MonoBehaviour:
@@ -589,6 +591,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfigsList: []
   looping: 0
+--- !u!114 &293556809356881045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293556809356881042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
+--- !u!114 &293556809356881046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293556809356881042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a2e1770d2db874d97e6491ba8950de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+  BulletPrefab: {fileID: 0}
+  obstaclePrefab: {fileID: 0}
+  healthDecreaseaudio: {fileID: 8300000, guid: b683b3ed328b20949b94655bde76a464, type: 3}
+  healtDecAudioVol: 0.75
+  health: 50
 --- !u!1001 &404244710688345112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,6 +770,24 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &404244710688345117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404244710688345113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
 --- !u!1001 &1370061302965283876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,6 +1390,24 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &5600631624718410883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600631624718410879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
 --- !u!1001 &7223045443454932571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1489,6 +1563,24 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &7223045443454932576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223045443454932572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
 --- !u!1001 &7356950906029565225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1763,6 +1855,24 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &7491579411853680962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491579411853680958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
 --- !u!1001 &8871348680007965642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1922,6 +2032,24 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &8871348680007965648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871348680007965643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce8f0d7a60e814b92583761cc3bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wave1damage: 1
+  Wave2damage: 2
+  Wave3damage: 3
+  Wave4damage: 4
+  Wave5damage: 5
+  Bulletsdamage: 1
 --- !u!1001 &8882371940705390404
 PrefabInstance:
   m_ObjectHideFlags: 0

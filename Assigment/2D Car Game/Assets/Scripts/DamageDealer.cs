@@ -20,6 +20,7 @@ public class DamageDealer : MonoBehaviour
 
 
 
+
     public int GetDamageForWaves()
     {
         return Wave1damage;
@@ -41,13 +42,7 @@ public class DamageDealer : MonoBehaviour
     {
         Destroy(gameObject);
 
-        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        //destroy after 1 sec
-        Destroy(explosion, 1f);
-
-        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
-
-
+       
     }
 
 }

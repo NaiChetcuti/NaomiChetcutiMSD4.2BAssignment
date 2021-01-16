@@ -30,8 +30,8 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] float explosionDuration;
 
     [SerializeField] AudioClip ObstacleDeathSound;
-
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
+
 
 
 
@@ -77,6 +77,7 @@ public class ObstacleWave : MonoBehaviour
         else
         {
             Destroy(gameObject);
+
         }
 
     }
@@ -104,7 +105,14 @@ public class ObstacleWave : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            
+
+            GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+            //destroy after 1 sec
+            Destroy(explosion, 1f);
+
+            AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
+
 
 
         }
@@ -116,12 +124,11 @@ public class ObstacleWave : MonoBehaviour
     private void ProcessHit(DamageDealer dmg)
     {
         health -= dmg.GetDamageForWaves();
-        DamageDealer.Hit();
        
 
         if (health <= 0)
         {
-            Die();
+            Destroy(gameObject);
         }
     }
 

@@ -8,7 +8,7 @@ public class Car : MonoBehaviour
     [SerializeField] GameObject BulletPrefab;
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] AudioClip healthDecreaseaudio;
-    [SerializeField] [Range(0, 1)] float healtDecAudioVol = 0.75f;
+    [SerializeField] [Range(0, 1)] float healtDecAudioVol = 0.55f;
 
 
     [SerializeField] int health = 50;

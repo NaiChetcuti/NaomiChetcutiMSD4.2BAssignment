@@ -9,6 +9,7 @@ public class ObstacleSpwaner : MonoBehaviour
 
     [SerializeField] bool looping = false;
 
+
     //start from 0
     int startingWave = 0;
 
