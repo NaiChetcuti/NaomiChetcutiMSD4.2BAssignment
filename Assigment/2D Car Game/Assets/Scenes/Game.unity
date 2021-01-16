@@ -305,6 +305,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1 &992843794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1370061303857329206, guid: 02d1ae0b437f76843bf8c3dc3f24f090, type: 3}
@@ -339,6 +343,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!4 &992843796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1370061303857329200, guid: 02d1ae0b437f76843bf8c3dc3f24f090, type: 3}
@@ -376,6 +384,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!4 &1213758707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3030344871970005037, guid: 61ceafec185456742b5784783d5a9583, type: 3}
@@ -413,6 +425,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!4 &1327688527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1382407600716883615, guid: 573a25e459f78eb4382db7bcf4e0f92e, type: 3}
@@ -499,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 1614660752078114475, guid: 786df045d6dcf4546bd7e61c7d64dcd3, type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614660752078114475, guid: 786df045d6dcf4546bd7e61c7d64dcd3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3993207831202254080, guid: 786df045d6dcf4546bd7e61c7d64dcd3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -609,6 +629,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &293556809356881046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +750,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 8300000, guid: 7ce43d274e2e1994c9cc7566432d034f, type: 3}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &404244710688345115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +816,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1001 &1370061302965283876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1346,6 +1378,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 8300000, guid: 7ce43d274e2e1994c9cc7566432d034f, type: 3}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &5600631624718410881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,6 +1444,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1001 &7223045443454932571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1519,6 +1559,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 8300000, guid: 7ce43d274e2e1994c9cc7566432d034f, type: 3}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &7223045443454932574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,6 +1625,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1001 &7356950906029565225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1811,6 +1859,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 8300000, guid: 7ce43d274e2e1994c9cc7566432d034f, type: 3}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &7491579411853680960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1873,6 +1925,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1001 &8871348680007965642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1988,6 +2044,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 8300000, guid: 7ce43d274e2e1994c9cc7566432d034f, type: 3}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!114 &8871348680007965645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,6 +2110,10 @@ MonoBehaviour:
   Wave4damage: 4
   Wave5damage: 5
   Bulletsdamage: 1
+  deathVFX: {fileID: 0}
+  explosionDuration: 0
+  ObstacleDeathSound: {fileID: 0}
+  ObstacleDeathSoundVolume: 0.75
 --- !u!1001 &8882371940705390404
 PrefabInstance:
   m_ObjectHideFlags: 0
