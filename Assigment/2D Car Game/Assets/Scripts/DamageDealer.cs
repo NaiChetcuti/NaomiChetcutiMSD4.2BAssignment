@@ -11,6 +11,10 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] int Wave5damage = 5;
     [SerializeField] int Bulletsdamage = 1;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
+
+
     public int GetDamageForWaves()
     {
         return Wave1damage;
@@ -19,6 +23,22 @@ public class DamageDealer : MonoBehaviour
         return Wave4damage;
         return Wave5damage;
         return Bulletsdamage;
+
+    }
+
+
+    public void Hit()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        //destroy after 1 sec
+        Destroy(explosion, 1f);
 
     }
 

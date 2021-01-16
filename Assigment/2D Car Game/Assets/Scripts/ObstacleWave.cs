@@ -26,6 +26,10 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
+
+
 
 
 
@@ -107,10 +111,12 @@ public class ObstacleWave : MonoBehaviour
     private void ProcessHit(DamageDealer dmg)
     {
         health -= dmg.GetDamageForWaves();
+        DamageDealer.Hit();
+       
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 

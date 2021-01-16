@@ -7,6 +7,9 @@ public class Car : MonoBehaviour
     [SerializeField] float MoveSpeed = 5f;
     [SerializeField] GameObject BulletPrefab;
     [SerializeField] GameObject obstaclePrefab;
+    [SerializeField] AudioClip healthDecreaseaudio;
+    [SerializeField] [Range(0, 1)] float healtDecAudioVol = 0.75f;
+
 
     [SerializeField] int health = 50;
 
@@ -20,6 +23,19 @@ public class Car : MonoBehaviour
         return health;
     }
 
+   public void HealthReduce()
+    {
+         void OnTriggerEnter2D(Collider2D other) 
+        {
+            DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+            health -= damageDealer.GetDamageForWaves();
+            if (health < 50)
+            {
+                AudioSource.PlayClipAtPoint(healthDecreaseaudio, Camera.main.transform.position, healtDecAudioVol);
+
+            }
+
+        }
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +48,7 @@ public class Car : MonoBehaviour
         
     }
 
-    private void Movement()
+    void Movement()
     {
         var deltaX = Input.GetAxis(Horizontal) * Time.deltaTime * MoveSpeed;
         var newXPos = transform.position.x + deltaX;
@@ -43,4 +59,5 @@ public class Car : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
 
     }
+}
 }
