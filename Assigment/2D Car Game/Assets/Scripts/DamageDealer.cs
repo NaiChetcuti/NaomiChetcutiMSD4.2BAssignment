@@ -18,6 +18,8 @@ public class DamageDealer : MonoBehaviour
 
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
 
+    [SerializeField] float health = 50;
+
 
 
 
@@ -43,6 +45,17 @@ public class DamageDealer : MonoBehaviour
         Destroy(gameObject);
 
        
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamageForWaves();
+
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

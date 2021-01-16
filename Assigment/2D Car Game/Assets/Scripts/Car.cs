@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Car : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class Car : MonoBehaviour
 
 
     [SerializeField] int health = 50;
+    [SerializeField] int CarScore = 0;
+
+    [SerializeField] GameObject PlayerPrefs;
+
+    [SerializeField] AudioClip GameOverSound;
+    [SerializeField] [Range(0, 1)] float GameOverSoundVol = 0.5f;
 
 
 
@@ -59,5 +67,17 @@ public class Car : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
 
     }
+
+         void ScoreandHelth()
+        {
+            if (health <= 0.CarScore = 100)
+            {
+                Destroy(PlayerPrefs);
+                AudioSource.PlayClipAtPoint(GameOverSound, Camera.main.transform.position, GameOverSoundVol);
+                SceneManager.LoadScene("GameOver");
+                print("Total Points :" + CarScore);
+
+            }
+        }
 }
 }

@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Levels : MonoBehaviour
 {
+    [SerializeField] float delayinSec = 3f;
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(delayinSec);
+        SceneManager.LoadScene("GameOver");
+
+    }
     public void LoadGame()
     {
         SceneManager.LoadScene("Game");
@@ -15,6 +22,12 @@ public class Levels : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+
+    public void LoadGameOver()
+    {
+        StartCoroutine(WaitAndLoad());
+    }
+
 
     public void QuitingGame()
     {

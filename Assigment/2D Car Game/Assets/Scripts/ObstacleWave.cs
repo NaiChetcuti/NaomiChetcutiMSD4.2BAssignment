@@ -33,6 +33,9 @@ public class ObstacleWave : MonoBehaviour
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
 
 
+    [SerializeField] float CarScore = 0;
+
+
 
 
 
