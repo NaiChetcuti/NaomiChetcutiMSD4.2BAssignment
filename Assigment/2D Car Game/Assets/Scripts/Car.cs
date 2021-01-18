@@ -26,6 +26,16 @@ public class Car : MonoBehaviour
     public string Horizontal { get; private set; }
     public string Vertical { get; private set; }
 
+    public int GetScore()
+    {
+        return CarScore;
+    }
+
+    public void AddToScore(int scoreValue)
+    {
+        CarScore += scoreValue;
+    }
+
     public int GettingHealth()
     {
         return health;
@@ -53,7 +63,8 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+            ScoreWin();
+            ScoreandHelth();
     }
 
     void Movement()
@@ -70,7 +81,7 @@ public class Car : MonoBehaviour
 
          void ScoreandHelth()
         {
-            if (health <= 0.CarScore = 100)
+            if (!(health > 0 || !CarScore) = 100)
             {
                 Destroy(PlayerPrefs);
                 AudioSource.PlayClipAtPoint(GameOverSound, Camera.main.transform.position, GameOverSoundVol);
@@ -78,6 +89,16 @@ public class Car : MonoBehaviour
                 print("Total Points :" + CarScore);
 
             }
+        }
+
+        void ScoreWin()
+        {
+            if (CarScore >= 100)
+            {
+                Application.Quit();
+                SceneManager.LoadScene("Winner");
+            }
+            
         }
 }
 }

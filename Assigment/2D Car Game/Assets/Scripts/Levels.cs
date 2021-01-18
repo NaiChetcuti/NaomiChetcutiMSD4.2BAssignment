@@ -23,6 +23,11 @@ public class Levels : MonoBehaviour
 
     }
 
+    public void LoadWinner()
+    {
+        SceneManager.LoadScene("Winner");
+    }
+
     public void LoadGameOver()
     {
         StartCoroutine(WaitAndLoad());
