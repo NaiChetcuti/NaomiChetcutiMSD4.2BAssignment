@@ -14,7 +14,7 @@ public class Car : MonoBehaviour
 
 
     [SerializeField] int health = 50;
-    [SerializeField] int CarScore = 0;
+    [SerializeField] int CarScore ;
 
     [SerializeField] GameObject PlayerPrefs;
 
@@ -81,7 +81,14 @@ public class Car : MonoBehaviour
 
          void ScoreandHelth()
         {
-            if (!(health > 0 || !CarScore) = 100)
+            if (health <= 0) 
+            {
+                Destroy(PlayerPrefs);
+                AudioSource.PlayClipAtPoint(GameOverSound, Camera.main.transform.position, GameOverSoundVol);
+                SceneManager.LoadScene("GameOver");
+                print("Total Points :" + CarScore);
+
+            }else if(CarScore >= 100)
             {
                 Destroy(PlayerPrefs);
                 AudioSource.PlayClipAtPoint(GameOverSound, Camera.main.transform.position, GameOverSoundVol);
