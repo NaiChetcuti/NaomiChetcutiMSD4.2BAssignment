@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class Car : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 5f;
@@ -14,7 +15,7 @@ public class Car : MonoBehaviour
 
 
     [SerializeField] int health = 50;
-    [SerializeField] int CarScore ;
+    [SerializeField] int CarScore = 0;
 
     [SerializeField] GameObject PlayerPrefs;
 
