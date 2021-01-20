@@ -58,7 +58,7 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+            
     }
 
     // Update is called once per frame
@@ -66,9 +66,10 @@ public class Car : MonoBehaviour
     {
             ScoreWin();
             ScoreandHelth();
-    }
 
-    void Movement()
+        }
+
+        void Movement()
     {
         var deltaX = Input.GetAxis(Horizontal) * Time.deltaTime * MoveSpeed;
         var newXPos = transform.position.x + deltaX;
