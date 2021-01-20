@@ -46,7 +46,7 @@ public class ObstacleWave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Waypoints = waveConfig.GetWaypointsList();
+        waveConfig.GetWaypointsList();
         transform.position = Waypoints[waypointIndex].transform.position;
 
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
@@ -58,6 +58,8 @@ public class ObstacleWave : MonoBehaviour
     {
         CountingDownAndShoot();
     }
+
+
 
     void ObstacleMove()
     {
